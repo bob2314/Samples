@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Fizz Buzz Demo</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <style>
+        #fizzy {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid grey;
+        }
+        #textValues {
+            width: 70%;
+            height: 200px;
+        }
+        
+        form > div {
+            vertical-align: top;
+        }
+        .info, form {
+            width: 48%;
+            margin: 5px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .userSection input {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <a href="#"></a>
+              <div class="navbar-header">
+                <h1>Fizz Buzz</h1><small>Robert Brennan</small>
+              </div>
+        </div>
+    </div>
+    
+    <div id="fizzy">
+        <div class='info'>
+            <h1>Info</h1>
+            <p>
+                FizzBuzz is a program that prints the numbers from 1 to 100 along with the following conditions:<br>
+                <ul>
+                    <li>On multiples of three print "Fizz" instead of the number</li>
+                    <li>for the multiples of five print "Buzz".</li>
+                    <li>For numbers which are multiples of both three and five print "FizzBuzz".</li>
+                </ul>
+            </p>
+        </div>
+        <form name="valform" action="" method="POST">
+            <div class='userSection'>
+                <strong>Fizz Parameters:</strong><br>
+                <input type='number' value='3' id='fizz' required/>
+                <input type='number' value='5' id='buzz' required/>
+                <input type='number' value='15' id='fizzbuzz' required/>
+                <input type="button" name="submit" value="Fizz it!" onclick=doFizz();>
+                <input type="reset" name="clear" value="Clear" onclick=clearFizz();>
+            </div>
+            <div class='outputSection'>
+                <h2>Output:</h2>
+                <textarea id='textValues' name='outputarea'></textarea>
+            </div>
+        </form>
+    </div>
+
+
+<script>
+    function doFizz() {
+        // Grab the input values
+        var fizzval = document.getElementById("fizz").value;
+        var buzzval = document.getElementById("buzz").value;
+        var fizzbuzzval = document.getElementById("fizzbuzz").value;
+        var textBox = document.valform.outputarea.value = "";
+        
+        // Fizz Methods
+        for (var i = 1; i <= 100; i++) {
+            if (i % fizzbuzzval == 0) {
+              document.valform.outputarea.value += "FizzBuzz" + "\n";
+            } else if (i % fizzval == 0) {
+                document.valform.outputarea.value += "Fizz" + "\n";
+            } else if (i % buzzval == 0) {
+                document.valform.outputarea.value += "Buzz" + "\n";
+            } else {
+                document.valform.outputarea.value += i + "\n";
+            }
+        }
+    };
+    
+    function clearFizz(){
+        document.valform.outputarea.value = "";
+    }
+</script>
+</body>
+</html>
