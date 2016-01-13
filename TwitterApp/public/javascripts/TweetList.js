@@ -8,7 +8,7 @@ app.controller('TweetList', function($scope, $resource, $timeout) {
     function init () {
 
       // Set the default Twitter handle to populate the grid.
-      $scope.username = "StackCommerce";
+      $scope.username = "mashable";
       
       // empty tweet model
       $scope.tweetsResult = [];

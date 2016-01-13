@@ -1,8 +1,8 @@
-# StackCommerce JS Twitter API Challenge
+# SA Super Cool & Super Simple Demo JS Twitter App
 
 ===================
 
-##Stack Commerce Code Challenge 
+##Originally part of a Code Challenge 
 The goal of this challenge is to create a simple Twitter application using a frontend framework.
 
 ##App Overview
@@ -38,7 +38,7 @@ Install [Node.js](http://nodejs.org/).
 Clone GitHub repo:
 
 ```
-git clone https://github.com/bob2314/StackCommerceTwitterApp.git
+git clone https://github.com/bob2314/SuperCoolTwitterApp.git
 ```
 Create a config.js file using config.sample.js as a template. Fill in your Twitter App API Keys. You will need to [create a Twitter application](https://apps.twitter.com/).
 
